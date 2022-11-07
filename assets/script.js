@@ -19,6 +19,9 @@ function startTimer()
     var seconds  = sec;
     document.getElementById("timer").innerHTML =seconds;
     sec--;
+    if (sec <= 0) {
+        sec = 0;
+    }
 };
 //this function sets interval for 1 second and calls timer function every second
 setInterval(function() {
