@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./assets//style.css">
+</head>
+<body>
+    <!-- header section starts here -->
+    <header class="header">
+        <nav class="main-nav">
+            <ul class="nav-ul">
+                <li class="nav-ul-li" id="highscores">
+                    View Highscores
+                </li>
+                <li class="nav-ul-li">
+                    Time: <span id="timer">75</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header section ends here -->
+
+    <main class="main">
+
+        <!-- questions section starts here -->
+        <section class="quiz-section-start" id="mainSection">
+            <h3 id="question">Commonly used data types DO NOT include:</h3>
+            <div class="options-wrapper">
+            <button onclick="submitAnswer(1)" id="choice1" class="choices">1. strings</button>
+            <button onclick="submitAnswer(2)" id="choice2" class="choices">2. booleans</button>
+            <button onclick="submitAnswer(3)" id="choice3" class="choices">3. alerts</button>
+            <button onclick="submitAnswer(4)" id="choice4" class="choices">4. numbers</button>
+            </div>
+            <div class="answer-hint" id="hide-correct">
+                <hr>
+                <p>Correct!</p>
+            </div>
+            <div class="answer-hint" id="hide-wrong">
+                <hr>
+                <p>Wrong!</p>
+            </div>
+        </section>
+        <!-- questions section ends here -->
+
+        <!-- initals taking section starts here -->
+        <section class="finish-section" id="finishSection">
+            <h1>All done!</h1>
+            <p class="final-score">   Your final score is <span id="score"></span>.</p>
+            <div class="flex">
+                <p class="width-fit">Enter Initials:</p>
+                <input type="text" id="initails-input" class="initals-input"> 
+                <button type="submit" onclick="submitInitials()" class="finish-btn">Submit</button>
+            </div>
+        </section>
+        <!-- initals taking section ends here -->
+
+        <!-- initals taking section starts here -->
+        <section class="highScores-section" id="highscoresSection">
+            <h1>Highscores</h1>
+            <div class="flex">
+                <p id="highScoreList">
+
+                </p>
+            </div>
+            <div>
+                <button type="submit" onclick="window.location.href='./index.html'" class="btn">Go Back</button>
+                <button type="submit" onclick="clearHighScores()" class="btn">Clear Highscores</button>
+            </div>
+        </section>
+        <!-- initals taking section ends here -->
+    </main>
+
+    <!-- javscript -->
+    <script src="./assets/script.js"></script>
+    
+</body>
+</html>
